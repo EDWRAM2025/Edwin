@@ -1,0 +1,47 @@
+:root{
+  --accent:#7c4dff; --bg:#0f1220; --card:#14182a; --border:#242a40; --muted:#a3adbd; --text:#eef1f7;
+}
+body{background:var(--bg); color:var(--text); font-family:system-ui,Segoe UI,Roboto,Arial}
+a{color:inherit;text-decoration:none}
+.bg-blur{backdrop-filter: blur(8px)!important; background: rgba(10,12,24,.65)!important}
+.btn-accent{background:var(--accent); color:#fff; border:0}
+.btn-outline-accent{border:1px solid var(--accent); color:var(--accent); background:transparent}
+.btn-accent:hover{opacity:.95}
+.btn-outline-accent:hover{background:var(--accent); color:#fff}
+.pill{display:inline-block; border:1px solid var(--border); padding:6px 10px; border-radius:999px; color:var(--muted); font-size:.9rem}
+.accent{color:var(--accent)}
+.section{padding:72px 0}
+.hero{min-height:70vh; display:flex; align-items:center; justify-content:center; text-align:center}
+.shadow-soft{box-shadow: 0 10px 30px rgba(0,0,0,.25)}
+.rounded-2xl{border-radius:20px}
+.card-pro{background:var(--card); border:1px solid var(--border); border-radius:18px}
+.skills .badge{background:transparent; border:1px solid var(--border); color:var(--text); padding:10px 12px}
+.text-secondary{color:var(--muted)!important}
+
+/* Weeks bonitos */
+.weeks-grid{display:grid; grid-template-columns:1fr; gap:10px}
+.week-btn{
+  background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(0,0,0,.06));
+  border:1px solid var(--border); border-radius:14px; padding:12px 14px;
+  display:flex; align-items:center; gap:12px; cursor:pointer; transition:.2s transform, .2s border-color;
+}
+.week-btn:hover{transform:translateY(-2px); border-color:var(--accent)}
+.week-btn.active{outline:2px solid var(--accent)}
+.week-num{
+  width:36px;height:36px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;
+  background:rgba(124,77,255,.15); color:var(--accent); font-weight:700
+}
+.week-title{font-weight:600}
+.week-sub{font-size:.85rem;color:var(--muted);margin-top:-4px}
+
+.files{background:var(--card); border:1px solid var(--border); border-radius:16px; padding:12px}
+.table-row{display:grid; grid-template-columns:1fr 170px 120px; gap:8px; padding:10px; border:1px solid var(--border); align-items:center; border-radius:12px; margin-bottom:8px}
+.table-row:hover{border-color:var(--accent)}
+.table-row .name{word-break:break-word}
+.badge-muted{border:1px solid var(--border); color:var(--muted); background:transparent}
+
+/* Footer / floating */
+.floating-whatsapp{
+  position:fixed; right:18px; bottom:18px; z-index:1030;
+  background:#25D366; color:#fff; width:56px; height:56px; display:flex; align-items:center; justify-content:center; border-radius:999px
+}

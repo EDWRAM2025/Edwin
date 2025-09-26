@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio PRO | EDWIN RAMIREZ</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <link href="styles.css" rel="stylesheet">
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg sticky-top bg-blur border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Portafolio | EDWIN RAMIREZ</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="nav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+
+        <!-- Auth -->
+        <li class="nav-item ms-lg-2">
+          <button id="btnLogin" class="btn btn-outline-accent btn-sm">
+            <i class="bi bi-box-arrow-in-right"></i> Iniciar sesión
+          </button>
+        </li>
+        <li class="nav-item ms-lg-2 d-none" id="userBox">
+          <span id="userEmail" class="pill me-2"></span>
+          <button id="btnLogout" class="btn btn-danger btn-sm">
+            <i class="bi bi-box-arrow-right"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="home" class="hero section">
+  <div class="container" data-aos="fade-up">
+    <span class="pill mb-3 d-inline-block">Ingeniería de Sistemas</span>
+    <h1 class="fw-extrabold mb-3">Hola, soy <span class="accent">EDWIN RAMIRES</span> 👋</h1>
+    <p class="lead text-secondary mb-4">Desarrollo sitios y sistemas con foco en UX, escalabilidad y calidad. Aquí encuentras mis trabajos, cursos (16 semanas) y cómo contactarme.</p>
+    <div class="d-flex gap-2 justify-content-center">
+      <a class="btn btn-accent shadow-soft" href="#projects"><i class="bi bi-briefcase"></i> Ver Proyectos</a>
+      <a class="btn btn-outline-accent" href="#cursos"><i class="bi bi-journal-bookmark"></i> Ir a Cursos</a>
+    </div>
+  </div>
+</header>
+
+<!-- SOBRE MI -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6" data-aos="fade-right">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop" alt="dev" class="img-fluid rounded-2xl shadow-soft">
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <h2 class="mb-3">Sobre mí</h2>
+        <p class="text-secondary">Estudiante de Ingeniería de Sistemas. Me gusta convertir ideas en productos reales, bien diseñados y mantenibles: Web (HTML/CSS/JS/Bootstrap), Python, SQL y Supabase.</p>
+        <div class="skills mt-3 d-flex flex-wrap gap-2">
+          <span class="badge">HTML</span><span class="badge">CSS / Bootstrap</span><span class="badge">JavaScript</span><span class="badge">Python</span><span class="badge">Supabase</span><span class="badge">SQL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="projects" class="section">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <h2 class="m-0">Proyectos</h2>
+      <span class="pill">Selección reciente</span>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+        <div class="card card-pro h-100">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Portafolio PRO</h5>
+            <p class="card-text text-secondary">Landing moderna con Bootstrap, AOS y modo oscuro.</p>
+            <a href="#home" class="btn btn-outline-accent btn-sm"><i class="bi bi-box-arrow-up-right"></i> Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="50">
+        <div class="card card-pro h-100">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Gestor de Archivos</h5>
+            <p class="card-text text-secondary">Frontend JS + Supabase Storage para subir/ver/eliminar con RLS.</p>
+            <a href="#cursos" class="btn btn-outline-accent btn-sm"><i class="bi bi-box-arrow-up-right"></i> Ver</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card card-pro h-100">
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Automatización Python</h5>
+            <p class="card-text text-secondary">Scripts para reportes automáticos y limpieza de datos.</p>
+            <a href="#" class="btn btn-outline-accent btn-sm"><i class="bi bi-github"></i> Código</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURSOS -->
+<section id="cursos" class="section">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4" data-aos="fade-right">
+        <h2>Cursos — 16 Semanas</h2>
+        <p class="text-secondary">Sube tus evidencias por semana. Inicia sesión para subir/eliminar.</p>
+        <div id="weeksList" class="weeks-grid"></div>
+      </div>
+      <div class="col-lg-8" data-aos="fade-left">
+        <div class="files">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <h5 id="currentWeekTitle" class="m-0">Semana</h5>
+            <div id="adminActions" class="d-none">
+              <label class="btn btn-outline-accent btn-sm me-1">
+                <i class="bi bi-upload"></i> Subir
+                <input type="file" id="fileInput" multiple hidden>
+              </label>
+              <button id="btnRefresh" class="btn btn-outline-accent btn-sm">
+                <i class="bi bi-arrow-repeat"></i>
+              </button>
+            </div>
+          </div>
+          <div id="filesList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="section">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6" data-aos="fade-right">
+        <h2>Contacto</h2>
+        <p class="text-secondary">¿Proyecto o colaboración? Escríbeme por el canal que prefieras.</p>
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-accent" href="https://wa.me/51999999999" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+          <a class="btn btn-outline-accent" href="mailto:tu-correo@ejemplo.com"><i class="bi bi-envelope"></i> Email</a>
+          <a class="btn btn-outline-accent" href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
+          <a class="btn btn-outline-accent" href="https://github.com/" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="card card-pro p-4">
+          <h5 class="mb-3">Mensaje rápido</h5>
+          <form onsubmit="window.location='mailto:tu-correo@ejemplo.com?subject=Contacto%20Portafolio&body='+encodeURIComponent(document.getElementById('msg').value); return false;">
+            <textarea id="msg" class="form-control mb-3" rows="5" placeholder="Escribe tu mensaje..."></textarea>
+            <button class="btn btn-accent">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-4 border-top" style="border-color:var(--border)!important">
+  <div class="container text-center text-secondary">© <span id="year"></span> DALL·TAL — Portafolio</div>
+</footer>
+
+<!-- AUTH MODAL -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content card-pro">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-person-lock"></i> Autenticación</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-2"><input id="authEmail" type="email" class="form-control" placeholder="correo@ejemplo.com"></div>
+        <div class="mb-2"><input id="authPass" type="password" class="form-control" placeholder="Contraseña"></div>
+        <small id="authMsg" class="text-secondary"></small>
+      </div>
+      <div class="modal-footer">
+        <button id="btnDoRegister" class="btn btn-outline-accent">Crear cuenta</button>
+        <button id="btnDoLogin" class="btn btn-accent">Entrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PREVIEW MODAL -->
+<div class="modal fade" id="previewModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content card-pro">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-eye"></i> Vista previa</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-0" id="previewBody" style="min-height:70vh; overflow:hidden"></div>
+      <div class="modal-footer">
+        <a id="previewDownload" class="btn btn-accent" target="_blank"><i class="bi bi-download"></i> Descargar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Floating WhatsApp -->
+<a class="floating-whatsapp shadow-soft" href="https://wa.me/51999999999" target="_blank" aria-label="WhatsApp">
+  <i class="bi bi-whatsapp fs-4"></i>
+</a>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
